@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<style>
+    .node{
+        display: block;
+        padding-left: 50px;
+        padding-top: 30px;
+    }
+    .node b{
+        border-bottom: 1px solid;
+    }
+</style>
+
+<div class ="container">
+
+    <div class ="node">
+        <b>RooT</b>
+
+    </div>
+
+
+
+
+
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous"></script>
+<script>
+
+    let count = 0
+    $(document).ready(function (){
+        $(".container").on("click",".node",function (e){
+            e.stopPropagation()
+            e.preventDefault()
+            const targetNode = $(e.target)
+            console.log(targetNode)
+            targetNode.append(`<div class ="node"><b>${count++}<button>X</button></b></div>`)
+        });
+
+
+
+        $(".container").on("click",".node button",function (e){
+            e.stopPropagation()
+
+            const target = $(e.target.closest(".node"))
+            console.log(target.find(".node"))
+            if((target.find(".node").length>0)){
+                alert("하위댓글이 있습니다")
+            }else {
+                target.remove()
+            }
+        })
+
+    })
+
+
+</script>
+
+
+
+
+</body>
+</html>

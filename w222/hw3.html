@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script>
+
+
+$(document).ready(function (){
+
+    /*let url = "http://apis.data.go.kr/6260000/BusanFmlyLvcrInfoService/getFmlyLvcrInfo?serviceKey=6wv9S5TOBoMyXXNMoP%2Bo8btDPSxzs3esgpE%2BUTm7VjsFGClYGsgNk2bMR3TI8%2Fac3OdigaFmvodWjl%2B0rB3F2A%3D%3D&pageNo=1&numOfRows=10&resultType=json&cpHgu=%EB%B6%80%EC%82%B0%EC%A7%84%EA%B5%AC&cpClass=%EC%96%B4%EB%A6%B0%EC%9D%B4%EC%A7%91"*/
+    const dataEx ="http://192.168.0.188:5555/w22/33team.json"
+    $.getJSON(dataEx, function(arr) {
+        console.log(arr)
+    })
+
+})//ready
+
+
+
+
+
+
+
+</script>
+
+
+</body>
+</html>

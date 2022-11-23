@@ -1,0 +1,99 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"801dd94e-288f-4d43-939e-a3ffe97b74e8\" name=\"Changes\" comment=\"day2\">\r\n      <change afterPath=\"$PROJECT_DIR$/homeWork1111.js\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/arrEx3.js\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/arrEx3.js\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"JavaScript File\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitSEFilterConfiguration\">\r\n    <file-type-list>\r\n      <filtered-out-file-type name=\"LOCAL_BRANCH\" />\r\n      <filtered-out-file-type name=\"REMOTE_BRANCH\" />\r\n      <filtered-out-file-type name=\"TAG\" />\r\n      <filtered-out-file-type name=\"COMMIT_BY_MESSAGE\" />\r\n    </file-type-list>\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"20f5WLzP7nA8E3236gyqQFOOSqn\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">\r\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\r\n    <property name=\"RunOnceActivity.ShowReadmeOnStart\" value=\"true\" />\r\n    <property name=\"WebServerToolWindowFactoryState\" value=\"false\" />\r\n    <property name=\"javascript.nodejs.core.library.configured.version\" value=\"16.13.0\" />\r\n    <property name=\"javascript.nodejs.core.library.typings.version\" value=\"16.11.7\" />\r\n    <property name=\"last_opened_file_path\" value=\"$PROJECT_DIR$\" />\r\n    <property name=\"nodejs_interpreter_path\" value=\"node\" />\r\n    <property name=\"nodejs_package_manager_path\" value=\"npm\" />\r\n    <property name=\"settings.editor.selected.configurable\" value=\"settings.nodejs\" />\r\n    <property name=\"vue.rearranger.settings.migration\" value=\"true\" />\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"Node.js.arrEx3.js\">\r\n    <configuration name=\"arrEx3.js\" type=\"NodeJSConfigurationType\" temporary=\"true\" nameIsGenerated=\"true\" path-to-js-file=\"$PROJECT_DIR$/arrEx3.js\" working-dir=\"$PROJECT_DIR$\">\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"fn1.js\" type=\"NodeJSConfigurationType\" temporary=\"true\" nameIsGenerated=\"true\" path-to-js-file=\"$PROJECT_DIR$/fn1.js\" working-dir=\"$PROJECT_DIR$\">\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"homeWork1111.js\" type=\"NodeJSConfigurationType\" temporary=\"true\" nameIsGenerated=\"true\" path-to-js-file=\"$PROJECT_DIR$/homeWork1111.js\" working-dir=\"$PROJECT_DIR$\">\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"homework.js\" type=\"NodeJSConfigurationType\" temporary=\"true\" nameIsGenerated=\"true\" path-to-js-file=\"$PROJECT_DIR$/homework.js\" working-dir=\"$PROJECT_DIR$\">\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"sortEx.js\" type=\"NodeJSConfigurationType\" temporary=\"true\" nameIsGenerated=\"true\" path-to-js-file=\"$PROJECT_DIR$/sortEx.js\" working-dir=\"$PROJECT_DIR$\">\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Node.js.arrEx3.js\" />\r\n        <item itemvalue=\"Node.js.sortEx.js\" />\r\n        <item itemvalue=\"Node.js.homework.js\" />\r\n        <item itemvalue=\"Node.js.homeWork1111.js\" />\r\n        <item itemvalue=\"Node.js.fn1.js\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"801dd94e-288f-4d43-939e-a3ffe97b74e8\" name=\"Changes\" comment=\"\" />\r\n      <created>1636422831579</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1636422831579</updated>\r\n      <workItem from=\"1636422833842\" duration=\"15200000\" />\r\n      <workItem from=\"1636446347009\" duration=\"726000\" />\r\n      <workItem from=\"1636447405747\" duration=\"2127000\" />\r\n      <workItem from=\"1636451381618\" duration=\"1221000\" />\r\n      <workItem from=\"1636452676142\" duration=\"1072000\" />\r\n      <workItem from=\"1636453776509\" duration=\"21000\" />\r\n      <workItem from=\"1636453814583\" duration=\"63000\" />\r\n      <workItem from=\"1636453939302\" duration=\"1159000\" />\r\n      <workItem from=\"1636503866503\" duration=\"16493000\" />\r\n      <workItem from=\"1636533373961\" duration=\"3519000\" />\r\n      <workItem from=\"1636542357711\" duration=\"2096000\" />\r\n      <workItem from=\"1636590901967\" duration=\"4686000\" />\r\n      <workItem from=\"1636596626587\" duration=\"14536000\" />\r\n      <workItem from=\"1636639720153\" duration=\"4033000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"day2\">\r\n      <created>1636447573363</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1636447573363</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"day2\">\r\n      <created>1636448068074</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1636448068074</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"day2\">\r\n      <created>1636533490873</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1636533490873</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"day2\">\r\n      <created>1636541691522</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1636541691522</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"day2\">\r\n      <created>1636619186866</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1636619186866</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"6\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State>\r\n              <option name=\"FILTERS\">\r\n                <map>\r\n                  <entry key=\"branch\">\r\n                    <value>\r\n                      <list>\r\n                        <option value=\"HEAD\" />\r\n                      </list>\r\n                    </value>\r\n                  </entry>\r\n                </map>\r\n              </option>\r\n            </State>\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_FILTERS\">\r\n      <map>\r\n        <entry key=\"Branch\">\r\n          <value>\r\n            <list>\r\n              <RecentGroup>\r\n                <option name=\"FILTER_VALUES\">\r\n                  <option value=\"master\" />\r\n                </option>\r\n              </RecentGroup>\r\n            </list>\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n    <option name=\"oldMeFiltersMigrated\" value=\"true\" />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"day2\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"day2\" />\r\n  </component>\r\n  <component name=\"XDebuggerManager\">\r\n    <breakpoint-manager>\r\n      <breakpoints>\r\n        <line-breakpoint enabled=\"true\" type=\"javascript\">\r\n          <url>file://$PROJECT_DIR$/arrEx3.js</url>\r\n          <line>39</line>\r\n          <properties lambdaOrdinal=\"-1\" />\r\n          <option name=\"timeStamp\" value=\"35\" />\r\n        </line-breakpoint>\r\n      </breakpoints>\r\n    </breakpoint-manager>\r\n    <watches-manager>\r\n      <inline-watch fileUrl=\"file://$PROJECT_DIR$/arrEx3.js\" line=\"9\">\r\n        <watch expression=\"sum\" language=\"JavaScript\" />\r\n      </inline-watch>\r\n    </watches-manager>\r\n  </component>\r\n  <component name=\"XSLT-Support.FileAssociations.UIState\">\r\n    <expand />\r\n    <select />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -2,9 +2,7 @@
+ <project version="4">
+   <component name="ChangeListManager">
+     <list default="true" id="801dd94e-288f-4d43-939e-a3ffe97b74e8" name="Changes" comment="day2">
+-      <change afterPath="$PROJECT_DIR$/homeWork1111.js" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/arrEx3.js" beforeDir="false" afterPath="$PROJECT_DIR$/arrEx3.js" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -41,35 +39,35 @@
+     <property name="WebServerToolWindowFactoryState" value="false" />
+     <property name="javascript.nodejs.core.library.configured.version" value="16.13.0" />
+     <property name="javascript.nodejs.core.library.typings.version" value="16.11.7" />
+-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
++    <property name="last_opened_file_path" value="$PROJECT_DIR$/../w1" />
+     <property name="nodejs_interpreter_path" value="node" />
+     <property name="nodejs_package_manager_path" value="npm" />
+     <property name="settings.editor.selected.configurable" value="settings.nodejs" />
+     <property name="vue.rearranger.settings.migration" value="true" />
+   </component>
+-  <component name="RunManager" selected="Node.js.arrEx3.js">
+-    <configuration name="arrEx3.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/arrEx3.js" working-dir="$PROJECT_DIR$">
++  <component name="RunManager" selected="Node.js.homeWork1111.js">
++    <configuration name="calcArea.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/calcArea.js" working-dir="$PROJECT_DIR$">
+       <method v="2" />
+     </configuration>
+     <configuration name="fn1.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/fn1.js" working-dir="$PROJECT_DIR$">
+       <method v="2" />
+     </configuration>
+-    <configuration name="homeWork1111.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/homeWork1111.js" working-dir="$PROJECT_DIR$">
++    <configuration name="fnEx.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/fnEx.js" working-dir="$PROJECT_DIR$">
+       <method v="2" />
+     </configuration>
+-    <configuration name="homework.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/homework.js" working-dir="$PROJECT_DIR$">
++    <configuration name="homeWork1111.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/homeWork1111.js" working-dir="$PROJECT_DIR$">
+       <method v="2" />
+     </configuration>
+-    <configuration name="sortEx.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/sortEx.js" working-dir="$PROJECT_DIR$">
++    <configuration name="knn.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/knn.js" working-dir="$PROJECT_DIR$">
+       <method v="2" />
+     </configuration>
+     <recent_temporary>
+       <list>
+-        <item itemvalue="Node.js.arrEx3.js" />
+-        <item itemvalue="Node.js.sortEx.js" />
+-        <item itemvalue="Node.js.homework.js" />
+         <item itemvalue="Node.js.homeWork1111.js" />
+         <item itemvalue="Node.js.fn1.js" />
++        <item itemvalue="Node.js.calcArea.js" />
++        <item itemvalue="Node.js.knn.js" />
++        <item itemvalue="Node.js.fnEx.js" />
+       </list>
+     </recent_temporary>
+   </component>
+@@ -93,8 +91,7 @@
+       <workItem from="1636533373961" duration="3519000" />
+       <workItem from="1636542357711" duration="2096000" />
+       <workItem from="1636590901967" duration="4686000" />
+-      <workItem from="1636596626587" duration="14536000" />
+-      <workItem from="1636639720153" duration="4033000" />
++      <workItem from="1636596626587" duration="14545000" />
+     </task>
+     <task id="LOCAL-00001" summary="day2">
+       <created>1636447573363</created>
+@@ -179,23 +176,6 @@
+   <component name="VcsManagerConfiguration">
+     <MESSAGE value="day2" />
+     <option name="LAST_COMMIT_MESSAGE" value="day2" />
+-  </component>
+-  <component name="XDebuggerManager">
+-    <breakpoint-manager>
+-      <breakpoints>
+-        <line-breakpoint enabled="true" type="javascript">
+-          <url>file://$PROJECT_DIR$/arrEx3.js</url>
+-          <line>39</line>
+-          <properties lambdaOrdinal="-1" />
+-          <option name="timeStamp" value="35" />
+-        </line-breakpoint>
+-      </breakpoints>
+-    </breakpoint-manager>
+-    <watches-manager>
+-      <inline-watch fileUrl="file://$PROJECT_DIR$/arrEx3.js" line="9">
+-        <watch expression="sum" language="JavaScript" />
+-      </inline-watch>
+-    </watches-manager>
+   </component>
+   <component name="XSLT-Support.FileAssociations.UIState">
+     <expand />

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Shop Homepage - Start Bootstrap Template</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+    <!--모달-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+</head>
+<body>
+<style>
+    #wrapCon{
+        display: flex;
+    }
+    #coffee{
+        width: 70vw;
+        display: flex;
+        min-height: 50vh;
+    }
+    #resultDiv{
+        width: 30vw;
+        border:0.5px #cccccc solid;
+        text-align: center;
+        padding-top: 3vh;
+        margin-top: 2vh;
+    }
+    #resultDiv ul{
+        margin-right: 1vw;
+        list-style: none;
+        text-align: center;
+    }
+    #exampleModal{
+        text-align: center;
+        vertical-align: center;
+    }
+    .modal-header{
+        justify-content: center;
+        margin: auto;
+    }
+</style>
+
+<!-- Header-->
+<header class="bg-dark py-5">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="text-center text-white">
+            <h1 class="display-4 fw-bolder">STARBUCKS</h1>
+            <p class="lead fw-normal text-white-50 mb-0">With this shop homepage template</p>
+        </div>
+    </div>
+</header>
+<!-- Section-->
+<div id="tabs">
+    <ul>
+        <li><a href="#coffee" data-catagory="coffee">COFFEE</a></li>
+        <li><a href="#coffee" data-catagory="cake">CAKE</a></li>
+        <li><a href="#coffee" data-catagory="sandwich">SANDWICH</a></li>
+    </ul>
+    <div id="wrapCon">
+        <div id="coffee" class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-5 justify-content-center">
+
+
+
+        </div>
+        <div id="resultDiv">
+            <h1>ORDER</h1>
+            <ul id="orderItems">
+                <li ></li>
+
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal-->
+<div class="modal" tabindex="-1" id="exampleModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+            </div>
+            <div class="modal-footer"id="orderDiv">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="orderBtn">주문</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Footer-->
+<footer class="py-5 bg-dark">
+    <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2021</p></div>
+</footer>
+<!-- Bootstrap core JS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+
+    $(document).ready(function (){
+        const myModal = new bootstrap.Modal(document.querySelector('#exampleModal')) // relatedTarget
+
+        $( "#tabs" ).tabs()
+
+        $("#tabs a").on("click", function(e){
+            let selectItem=e.target.getAttribute("data-catagory")
+            const resultArr = menuArr.filter(oi => oi.category === selectItem)
+            let str =''
+
+            for (let i = 0; i < resultArr.length; i++) {
+                const menu = resultArr[i]
+                str +=`<div class="col mb-5">
+                    <div class="card h-100">
+                        <img class="card-img-top" src="${menu.picture}" alt="..." />
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <h5 class="fw-bolder">${menu.name}</h5>
+                                <div class="d-flex justify-content-center small text-warning mb-2"></div>
+                                ${menu.price}
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><button type="button" id="btn" class="btn btn-primary" data-picture="${menu.picture}" data-name="${menu.name}" data-price="${menu.price}">Click</div>
+
+                        </div>
+                    </div>
+                </div>`
+
+            }//for
+            $("#coffee").html(str)
+        })//click
+
+        //data-bs-toggle="modal" data-bs-target="#exampleModal"
+
+
+        $(document).on("click", "#btn", function(e){
+            let pictureData=(e.target.getAttribute("data-picture"))
+            let nameData=(e.target.getAttribute("data-name"))
+            let priceData=(e.target.getAttribute("data-price"))
+            console.log(pictureData)
+            $(".modal-body").html(`<img src=${pictureData} data-name="${nameData}"/><h3>${priceData}원</h3>`)
+            $(".modal-title").html(`${nameData}`)
+            $("#orderDiv").html(`
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="orderBtn" data-name="${nameData}">주문</button>
+                    `)
+
+            myModal.show()
+
+        });
+
+
+
+
+        const orderListEle = document.querySelector("#orderItems")
+        $(document).on("click","#orderBtn",function (e){
+            const getItem=e.target.getAttribute("data-name")
+            console.log(getItem)
+            const result= orders.filter(oi => oi.name === getItem)
+            const result2= menuArr.filter(oi => oi.name === getItem)
+
+
+            myModal.hide()
+
+            if(result.length > 0){
+                result[0].qty += 1
+            }else {
+                orders.push({...result2[0],qty:1})
+            }
+            console.log(orders)
+            let orderStr =''
+            let sum = 0
+            for (let i = 0; i < orders.length ; i++) {
+                const orderItem = orders[i]
+                orderStr += `<li>${orderItem.name} ====== ${orderItem.qty}개 ====== ${orderItem.price * orderItem.qty} </li>`
+                sum += orderItem.price * orderItem.qty
+            }
+
+            orderStr += `<hr/><h1>${sum}</h1>`
+            orderListEle.innerHTML = orderStr
+
+        })//click
+
+
+
+    })//ready
+
+
+
+
+
+    const menuArr = [
+        {name:"바닐라 크림 콜드브루", price:6500, picture:'img/c1.jpg',category:"coffee"},
+        {name:"제주 비자림 콜드브루", price:5500, picture:'img/c2.jpg',category:"coffee"},
+        {name:"치즈케익 라떼", price:6000, picture:'img/c3.jpg',category:"coffee"},
+        {name:"오렌지 라떼", price:5000, picture:'img/c4.jpg',category:"coffee"},
+        {name:"초콜릿 크림칩 프라푸치노", price:7000, picture:'img/c5.jpg',category:"coffee"},
+        {name:"생크림 카스테라", price:6000, picture:'img/d1.jpg',category:"cake"},
+        {name:"클라우드 치즈케이크", price:4500, picture:'img/d2.jpg',category:"cake"},
+        {name:"TT 티라미수", price:5000, picture:'img/d3.jpg',category:"cake"},
+        {name:"애멘탈 치즈케이크", price:30000, picture:'img/d4.jpg',category:"cake"},
+        {name:"블루베리 케이크", price:5500, picture:'img/d5.jpg',category:"cake"},
+        {name:"단호박 샌드위치", price:4500, picture:'img/s1.jpg',category:"sandwich"},
+        {name:"바베큐 치킨 치아바타", price:4000, picture:'img/s2.jpg',category:"sandwich"},
+        {name:"에그에그 샌드위치", price:4500, picture:'img/s3.jpg',category:"sandwich"},
+        {name:"루꼴라 샌드위치", price:5000, picture:'img/s4.jpg',category:"sandwich"},
+        {name:"커리치킨 샐러드", price:6000, picture:'img/s5.jpg',category:"sandwich"}
+    ]
+    let orders= []
+</script>
+<!-- Core theme JS-->
+<script src="js/scripts.js"></script>
+</body>
+</html>

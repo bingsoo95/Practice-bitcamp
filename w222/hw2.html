@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+</head>
+<body>
+<style>
+
+  .wrap{
+    display: flex;
+  }
+
+  #map{
+    width:50vw;
+    height:50vh;
+  }
+  .menu{
+    width:50vw;
+
+  }
+  .menu li{
+    height: 5vh;
+  }
+
+
+
+</style>
+
+
+<div class="wrap">
+  <div id="map" style="width:50vw;height:40vh;">
+
+  </div>
+  <div class="menu">
+    <div id="tabs">
+      <ul>
+        <li><a href="#result" onclick="changeData('http://localhost:5555/w222/1team.json')">한식</a></li>
+        <li><a href="#result" onclick="changeData('http://localhost:5555/w222/2team.json')">일식</a></li>
+        <li><a href="#result" onclick="changeData('http://localhost:5555/w222/3team.json')">프렌차이즈</a></li>
+      </ul>
+      <div id="result">
+        <ul class="storeList">
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<script>
+  $(document).ready(function (){
+    $("#tabs").tabs()
+  })//click
+
+</script>
+
+<!--Kakao Api 코드 -->
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=eeb8aac23e9ee3ef23b63b56c243c13e"></script>
+<script>
+  var mapContainer = document.getElementById('map'), // 지도를 표시할 div
+          mapOption = {
+            center: new kakao.maps.LatLng(37.4988972,127.0301971), // 지도의 중심좌표
+            level: 9 // 지도의 확대 레벨
+          };
+
+  // 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
+  var map = new kakao.maps.Map(mapContainer, mapOption);
+</script>
+
+
+<!--Js 코드 -->
+<script src="hw2.js"></script>
+<script>
+  function changeData(url){
+
+    storeService.loadData(url, (arr) => {
+      console.log("callback............")
+      console.log(arr)
+      makeList(arr)
+      showMarkers(arr)
+    })
+  }
+
+  function makeList(arr){
+    const storeULEle = document.querySelector(".storeList")
+    let str = ''
+
+    for (let i = 0; i < arr.length ; i++) {
+      console.log(arr[i])
+      str += `<li data-idx="${i}">${arr[i].sname}</li>`
+    }//end for
+
+    storeULEle.innerHTML = str
+  }
+
+  const markerArr = []
+
+  function showMarkers(stores){
+
+    //기존 마커들은 지워야 한다.
+    for (let i = 0; i < markerArr.length; i++) {
+      markerArr[i].setMap(null)
+    }
+
+    for (let i = 0; i <stores.length ; i++) {
+      const store = stores[i]
+      const latLng = new kakao.maps.LatLng(store.lat, store.lng);
+      const marker = new kakao.maps.Marker({
+        map:map,
+        position: latLng,
+        title: store.name
+      })
+      markerArr.push(marker)
+    }//end for
+  }
+
+  document.querySelector(".storeList").addEventListener("click",(e) => {
+    e.preventDefault()
+    e.stopPropagation()
+    const target = e.target
+
+    const idx = target.getAttribute("data-idx")
+    const store = storeService.getDataByIndex(idx)
+    console.log(store)
+
+    showMarkers([store])
+
+  },false)
+
+
+</script>
+
+</body>
+</html>

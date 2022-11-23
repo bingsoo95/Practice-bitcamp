@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>지도 생성하기</title>
+
+</head>
+<body>
+<!-- 지도를 표시할 div 입니다 -->
+<div id="map" style="width:100vw;height:50vh;"></div>
+<div id="result"></div>
+
+<style>
+    .menuDiv {
+        display: flex;
+        margin: 50px;
+        justify-content: space-between;
+
+    }
+    .menuDiv > a {
+        text-decoration: none;
+        background-color: mediumslateblue;
+        color: white;
+        font-size: large;
+        border-radius: 3px;
+        padding: 10px;
+    }
+    .button {
+        display: flex;
+        justify-content: center;
+    }
+    .storeList {
+        margin-left: 45vw;
+        justify-content: center;
+
+    }
+
+
+w
+</style>
+
+<div class="menuDiv">
+    <a href="전체">전체</a>
+    <a href="중식">중식</a>
+    <a href="양식">양식</a>
+</div>
+<div class="button">
+    <button onclick="loadData('http://localhost:5555/w17/homework.json')">민수</button>
+</div>
+<ul class="storeList">
+
+</ul>
+<div>
+
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=fbe9fc569f8df8de9bd555cfa0fd52d4"></script>
+<script>
+    var mapContainer = document.getElementById('map'), // 지도를 표시할 div
+        mapOption = {
+            center: new kakao.maps.LatLng(37.5402738,127.0635238), // 지도의 중심좌표
+            level: 8 // 지도의 확대 레벨
+        };
+
+    var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+
+    kakao.maps.event.addListener(map, 'click', function(mouseEvent) {
+
+        // 클릭한 위도, 경도 정보를 가져옵니다
+        var latlng = mouseEvent.latLng;
+
+        var message = '클릭한 위치의 위도는 ' + latlng.getLat() + ' 이고, ';
+        message += '경도는 ' + latlng.getLng() + ' 입니다';
+
+        var resultDiv = document.getElementById('result');
+        resultDiv.innerHTML = message;
+
+    });
+    const markerArr = []
+
+    function showMarkers(stores){
+        //기존 마커들은 지워야 한다.
+        for (let i = 0; i < markerArr.length; i++) {
+            markerArr[i].setMap(null)
+        }
+
+        for (let i = 0; i < stores.length ; i++) {
+            const store = stores[i]
+            const latLng = new kakao.maps.LatLng(store.lat, store.lng);
+            const marker = new kakao.maps.Marker({
+                map:map,
+                position: latLng,
+                title: store.name
+            })
+            markerArr.push(marker)
+        }//end for
+    }
+
+    const arr = [
+        {name:'봉자마라탕' , lat:37.5402738 , lng:127.0635238 , menu:'중식', thumb:'01.jpg'},
+        {name:'딘타이펑' ,   lat:37.4991668 , lng:127.0258482 , menu:'중식'},
+        {name:'프리모바치오바치' , lat:37.5005897 , lng:127.0270934 , menu:'양식'},
+        {name:'비야게레로' ,    lat:37.5124750 , lng:127.0528292 , menu:'양식'},
+    ]
+    document.querySelector(".menuDiv").addEventListener("click", (e) => {
+        e.preventDefault()
+        e.stopPropagation()
+
+        const target = e.target
+
+        if(target.tagName !== 'A') {
+            return
+        }
+        console.log("A태그 클릭")
+        const keyword = target.getAttribute("href")
+
+        if(keyword !== '전체'){
+            const result = arr.filter(s => s.menu === keyword)
+
+            showMarkers(result)
+        }else {
+            showMarkers(arr)
+        }
+
+
+    }, false)
+
+</script>
+<script>
+
+
+    function loadData(serverInfo){
+
+        console.log("loadData: " + serverInfo )
+
+        fetch(serverInfo)
+            .then( response => response.json())
+            .then( data => {
+                //console.log(data)
+                makeList(data)
+            })
+
+
+    }
+
+    function makeList(arr){
+        const ulEle = document.querySelector(".storeList")
+        let str = ''
+
+        for (let i = 0; i < arr.length ; i++) {
+            console.log(arr[i])
+            str += `<li data-name="${arr[i].name}" data-lat="${arr[i].lat}" data-lng="${arr[i].lng}" data-thumb="${arr[i].thumb}" >${arr[i].name}
+                    <img src="img/01.jpg" alt="arr[i]"/></li>`
+        }//end for
+
+        ulEle.innerHTML = str
+
+    }
+
+    document.querySelector(".storeList").addEventListener("click", (e) => {
+        e.stopPropagation()
+        e.preventDefault()
+        const target = e.target
+
+        if(target.tagName !=='LI'){
+            retrun
+        }
+        console.log(target)
+        const name = target.getAttribute("data-name")
+        const lat = target.getAttribute("data-name")
+        const lng= target.getAttribute("data-name")
+        const thumb= target.getAttribute("data-name")
+
+        console.log(name, lat, lng, thumb)
+
+    }, false)
+
+</script>
+
+</body>
+</html>

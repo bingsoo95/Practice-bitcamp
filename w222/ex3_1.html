@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+</head>
+<body>
+
+<select name="category">
+  <option>---</option>
+  <option value="http://192.168.0.195:5555/w22/1team.json">한식</option>
+  <option value="http://192.168.0.215:5555/w22/2team.json">일식</option>
+  <option value="http://192.168.0.188:5555/w22/3team.json">프렌차이즈</option>
+
+</select>
+<select name="stores">
+  <option>---</option>
+</select>
+
+<ul class = "details">
+
+</ul>
+
+
+
+
+<script src="store.js"> </script>
+
+
+<script>
+
+
+  storeService.loadJson("http://192.168.0.195:5555/w22/1team.json", function (arr){
+    console.log()
+  })
+
+
+</script>
+
+
+
+
+</body>
+</html>

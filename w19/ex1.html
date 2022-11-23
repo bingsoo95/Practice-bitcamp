@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+
+<style>
+    .red {
+        color: red;
+    }
+</style>
+
+
+<h1>AAA</h1>
+
+<a href="mp3/aaa.mp3">AAAAAAA</a>
+<a href="mp3/aaa.mp3">AAAAAAA</a>
+<a href="mp3/aaa.mp3">AAAAAAA</a>
+<a href="mp3/aaa.mp3">AAAAAAA</a>
+
+
+
+<script
+        src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous"></script>
+<script>
+
+    const aaa = document.querySelector("h1")
+    //aaa.innerHTML ="BBBB"
+
+    const bbb = $("h1")
+    //bbb.get(0).innerHTML ="BBB"
+
+    //bbb[0].innerHTML ="BBB"
+    bbb.html("BBB")
+
+    console.log(bbb.html())
+
+    $("a").attr("href", "mp3/ccc.mp3").addClass("red").hide("slow")
+
+
+</script>
+
+
+
+</body>
+</html>
